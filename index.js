@@ -11,12 +11,12 @@ const dates = [
 const createDate = (dates, posisi) => {
   const arrBaru = [];
   for (i = 0; i < dates.length; i++) {
-    arrBaru.push(Date.parse(dates[i]));
+    arrBaru.push(Date.parse(dates[i]).toString().slice(0, -3));
   }
   if (posisi == null) {
     return arrBaru.sort().join("-").toString();
   } else {
-    return arrBaru[posisi].toString().slice(0, -3);
+    return arrBaru[posisi].toString();
   }
 };
 
