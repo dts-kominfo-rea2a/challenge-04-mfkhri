@@ -16,7 +16,7 @@ const createDate = (dates, posisi) => {
   if (posisi == null) {
     return arrBaru.sort().join("-").toString();
   } else {
-    return arrBaru[posisi].toString();
+    return arrBaru[posisi].toString().slice(0, -3);
   }
 };
 
